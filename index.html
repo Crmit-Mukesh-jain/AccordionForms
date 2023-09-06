@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="./js/script.js"></script>
+  <style>
+    a,
+    a:hover,
+    a:focus {
+      outline: none;
+      text-decoration: none;
+    }
+
+    .panel-default>.panel-heading {
+      background-color: #006cb5;
+      padding: 20px 1.25rem;
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+
+    .panel-heading h4 {
+      color: #fff;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-lg-12">
+        <div class="panel-group" id="accordion">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Step 1: Organization Information <div class="edit-step">Edit Step</div></a>
+
+              </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse in">
+              <div class="panel-body">
+                <form>
+                  <h2>Organization Information</h2><br>
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label>*Membership Category</label><br>
+                      <select id="category">
+                                                <option value=""></option>
+                                                <option value="CM">Company</option>
+                                                <option value="NS">Educational</option>
+                                                <option value="GM">Government</option>
+                                                <option value="OM">Organizational</option>
+                                                <option value="IND">Individual</option>
+                                                <option value="RET">Retail</option>
+                                            </select><br><br>
+                    </div>
+                    <div class="col-md-3">
+                      <label>*Membership Type</label><br>
+                      <select id="type">
+                                                <option value="Basic">Basic</option>
+                                                <option value="Full">Full</option>
+                                            </select>
+                    </div>
+                    <div class="col-md-6">
+                      <div id="annualRev">
+                        <label id="LbAnnualRev">*Annual Revenue</label><br>
+                        <select id="oAnnualRev0">
+                                                    <option value="99999999">$99,999,999 and under</option>
+                                                    <option value="149999999">$100,000,000 to $149,999,999</option>
+                                                    <option value="249999999">$150,000,000 to $249,999,999</option>
+                                                    <option value="499999999">$250,000,000 to $499,999,999</option>
+                                                    <option value="999999999">$500,000,000 to $999,999,999</option>
+                                                    <option value="1999999999">$1,000,000,000 to $1,999,999,999</option>
+                                                    <option value="2999999999">$2,000,000,000 to $2,999,999,999</option>
+                                                    <option value="4999999999">$3,000,000,000 to $4,999,999,999</option>
+                                                    <option value="9999999999">$5,000,000,000 to $9,999,999,999</option>
+                                                </select>
+                        <select id="oAnnualRev1">
+                                                    <option value="999999">$999,999 and under</option>
+                                                    <option value="9999999">$1,000,000 to $9,999,999</option>
+                                                    <option value="10000000000">$10,000,000 and higher</option>
+                                                </select>
+                        <select id="oAnnualRev3">
+                                                    <option value="90000000000">&gt; $10 Billion</option>
+                                                    <option value="10000000000">$5–$10 billion</option>
+                                                    <option value="5000000000">$3–$5 billion </option>
+                                                    <option value="3000000000">$2–$3 billion</option>
+                                                    <option value="2000000000">$1-$2 billion</option>
+                                                    <option value="1000000000">$500 million – $1 billion</option>
+                                                    <option value="500000000"> $250–$500 million</option>
+                                                    <option value="250000000">&lt; $250 million</option>
+                                                </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-4">
+                      <label>*Organization Name</label>
+                      <input type="text" name="organization" id="vCompanyName">
+                    </div>
+                    <div class="col-md-4">
+                      <label>*Address 1</label>
+                      <input type="text" name="address1" id="sAddress1">
+                    </div>
+                    <div class="col-md-4">
+                      <label>*Address 2</label>
+                      <input type="text" name="address2" id="sAddress2">
+                    </div>
+                  </div><br>
+
+                  <div class="row">
+                    <div class="col-md-4">
+                      <label>*City</label><br>
+                      <input type="text" name="city" id="sCity">
+                    </div>
+                    <div class="col-md-4">
+                      <label>*State</label><br>
+                      <select id="oState">
+                                                <option value=""></option>
+                                                <option value="AL">Alabama</option>
+                                                <option value="AK">Alaska</option>
+                                                <option value="AZ">Arizona</option>
+                                                <option value="AR">Arkansas</option>
+                                                <option value="CA">California</option>
+                                                <option value="CO">Colorado</option>
+                                                <option value="CT">Connecticut</option>
+                                                <option value="DE">Delaware</option>
+                                                <option value="DC">District of Columbia</option>
+                                                <option value="FL">Florida</option>
+                                                <option value="GA">Georgia</option>
+                                                <option value="GU">Guam</option>
+                                                <option value="HI">Hawaii</option>
+                                                <option value="ID">Idaho</option>
+                                                <option value="IL">Illinois</option>
+                                                <option value="IN">Indiana</option>
+                                                <option value="IA">Iowa</option>
+                                                <option value="KS">Kansas</option>
+                                                <option value="KY">Kentucky</option>
+                                                <option value="LA">Lousiana</option>
+                                                <option value="ME">Maine</option>
+                                                <option value="MD">Maryland</option>
+                                                <option value="MA">Massachusetts</option>
+                                                <option value="MI">Michigan</option>
+                                                <option value="MN">Minnesota</option>
+                                                <option value="MS">Mississippi</option>
+                                                <option value="MO">Missouri</option>
+                                                <option value="MT">Montana</option>
+                                                <option value="NE">Nebraska</option>
+                                                <option value="NV">Nevada</option>
+                                                <option value="NH">New Hampshire</option>
+                                                <option value="NJ">New Jersey</option>
+                                                <option value="NM">New Mexico</option>
+                                                <option value="NY">New York</option>
+                                                <option value="NC">North Carolina</option>
+                                                <option value="ND">North Dakota</option>
+                                                <option value="OH">Ohio</option>
+                                                <option value="OK">Oklahoma</option>
+                                                <option value="ON">Ontario</option>
+                                                <option value="OR">Oregon</option>
+                                                <option value="PA">Pennsylvania</option>
+                                                <option value="PR">Puerto Rico</option>
+                                                <option value="QC">Quebec</option>
+                                                <option value="RI">Rhode Island</option>
+                                                <option value="SC">South Carolina</option>
+                                                <option value="SD">South Dakota</option>
+                                                <option value="TN">Tennessee</option>
+                                                <option value="TX">Texas</option>
+                                                <option value="UT">Utah</option>
+                                                <option value="VT">Vermont</option>
+                                                <option value="VI">Virgin Islands</option>
+                                                <option value="VA">Virginia</option>
+                                                <option value="WA">Washington</option>
+                                                <option value="WV">West Virginia</option>
+                                                <option value="WI">Wisconsin</option>
+                                                <option value="WY">Wyoming</option>
+                                            </select>
+                    </div>
+                    <div class="col-md-4">
+                      <label>*ZIP/Postal Code</label><br>
+                      <input type="text" name="zip" id="sZIP">
+                    </div>
+                  </div><br>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <label>Website</label><br>
+                      <input type="text" id="sWebsite">
+                    </div>
+                  </div><br>
+                  <div>
+                    <label style="font-size: 20px">
+                                            <input type="checkbox" value="" id="copyInfoCheck">
+                                            Check if organization info same as contact info
+                                        </label>
+                  </div>
+                  <h2>Contact Information</h2><br>
+                  <div class="row">
+                    <div class="col-md-2">
+                      <label>Prefix</label><br>
+                      <select id="oCPrefix">
+                                                <option></option>
+                                                <option>Dr.</option>
+                                                <option>Hon.</option>
+                                                <option>Mr.</option>
+                                                <option>Mrs.</option>
+                                                <option>Ms.</option>
+                                            </select><br><br>
+                    </div>
+                    <div class="col-md-5">
+                      <label>*First Name</label><br>
+                      <input type="text" id="sFirstName">
+                    </div>
+                    <div class="col-md-5">
+                      <label id="LbAnnualRev">*Last Name</label><br>
+                      <input type="text" id="sLastName">
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-4">
+                      <label>*Job Title</label><br>
+                      <input type="text" id="sCJobTitle">
+                    </div>
+                    <div class="col-md-4">
+                      <label>*Email</label><br>
+                      <input type="text" id="sCEmail">
+                    </div>
+                    <div class="col-md-4">
+                      <label>*Confirm Email</label><br>
+                      <input type="text" id="sConfirmEmail">
+                    </div>
+                  </div><br>
+
+                  <div class="row">
+                    <div class="col-md-4">
+                      <label>*Phone Number</label>
+                      <input type="text" id="sCPhone">
+                    </div>
+                    <div class="col-md-4">
+                      <label>*Address 1</label>
+                      <input type="text" id="sCAddress1">
+                    </div>
+                    <div class="col-md-4">
+                      <label>*Address 2</label>
+                      <input type="text" id="sCAddress2">
+                    </div>
+                  </div><br>
+
+                  <div class="row">
+                    <div class="col-md-4">
+                      <label>*City</label><br>
+                      <input type="text" id="sCCity">
+                    </div>
+                    <div class="col-md-4">
+                      <label>*State</label><br>
+                      <select id="oCState">
+                                                <option value=""></option>
+                                                <option value="AL">Alabama</option>
+                                                <option value="AK">Alaska</option>
+                                                <option value="AZ">Arizona</option>
+                                                <option value="AR">Arkansas</option>
+                                                <option value="CA">California</option>
+                                                <option value="CO">Colorado</option>
+                                                <option value="CT">Connecticut</option>
+                                                <option value="DE">Delaware</option>
+                                                <option value="DC">District of Columbia</option>
+                                                <option value="FL">Florida</option>
+                                                <option value="GA">Georgia</option>
+                                                <option value="GU">Guam</option>
+                                                <option value="HI">Hawaii</option>
+                                                <option value="ID">Idaho</option>
+                                                <option value="IL">Illinois</option>
+                                                <option value="IN">Indiana</option>
+                                                <option value="IA">Iowa</option>
+                                                <option value="KS">Kansas</option>
+                                                <option value="KY">Kentucky</option>
+                                                <option value="LA">Lousiana</option>
+                                                <option value="ME">Maine</option>
+                                                <option value="MD">Maryland</option>
+                                                <option value="MA">Massachusetts</option>
+                                                <option value="MI">Michigan</option>
+                                                <option value="MN">Minnesota</option>
+                                                <option value="MS">Mississippi</option>
+                                                <option value="MO">Missouri</option>
+                                                <option value="MT">Montana</option>
+                                                <option value="NE">Nebraska</option>
+                                                <option value="NV">Nevada</option>
+                                                <option value="NH">New Hampshire</option>
+                                                <option value="NJ">New Jersey</option>
+                                                <option value="NM">New Mexico</option>
+                                                <option value="NY">New York</option>
+                                                <option value="NC">North Carolina</option>
+                                                <option value="ND">North Dakota</option>
+                                                <option value="OH">Ohio</option>
+                                                <option value="OK">Oklahoma</option>
+                                                <option value="ON">Ontario</option>
+                                                <option value="OR">Oregon</option>
+                                                <option value="PA">Pennsylvania</option>
+                                                <option value="PR">Puerto Rico</option>
+                                                <option value="QC">Quebec</option>
+                                                <option value="RI">Rhode Island</option>
+                                                <option value="SC">South Carolina</option>
+                                                <option value="SD">South Dakota</option>
+                                                <option value="TN">Tennessee</option>
+                                                <option value="TX">Texas</option>
+                                                <option value="UT">Utah</option>
+                                                <option value="VT">Vermont</option>
+                                                <option value="VI">Virgin Islands</option>
+                                                <option value="VA">Virginia</option>
+                                                <option value="WA">Washington</option>
+                                                <option value="WV">West Virginia</option>
+                                                <option value="WI">Wisconsin</option>
+                                                <option value="WY">Wyoming</option>
+                                            </select>
+                    </div>
+                    <div class="col-md-4">
+                      <label>*ZIP/Postal Code</label><br>
+                      <input type="text" id="sCZIP">
+                    </div>
+                  </div><br>
+
+                  <div class="row">
+                    <div class="col-md-4">
+                      <label>*Country</label><br>
+                      <select id="oCCountry" disabled>
+                                                <option value="US">United States</option>
+                                            </select><br><br>
+                    </div>
+                    <div class="col-md-4">
+                      <label>Contact Type</label><br>
+                      <select id="oCContactType">
+                                                <option></option>
+                                                <option>Primary Contact</option>
+                                                <option>Bill to Person</option>
+                                            </select>
+                    </div>
+                  </div><br>
+                </form><br>
+                <div id="continue1" class="continue-button">Continue</div><br>
+              </div>
+
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Step 2: Payment Information <div class="edit-step">Edit Step</div></a>
+              </h4>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse">
+              <div class="panel-body">
+                <h1>Organization Summary</h1>
+                <!-- Contact summary table -->
+                <table class="table">
+                  <tr>
+                    <td>
+                      <nobr>Membership type</nobr>
+                    </td>
+                    <td>
+                      <asp:Label ID="lblMembershipType" runat="server" Text=""></asp:Label>
+                    </td>
+                    <td>
+                      <nobr>Membership category</nobr>
+                    </td>
+                    <td>
+                      <asp:Label ID="lblMemCat" runat="server" Text=""></asp:Label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <nobr>Company Name</nobr>
+                    </td>
+                    <td>
+                      <asp:Label ID="lblCompanyName" runat="server" Text=""></asp:Label>
+                    </td>
+                    <td>
+                      <nobr>Address 1</nobr>
+                    </td>
+                    <td>
+                      <asp:Label ID="lblAddress1" runat="server" Text=""></asp:Label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <nobr>Address 2</nobr>
+                    </td>
+                    <td>
+                      <asp:Label ID="lblAddress2" runat="server" Text=""></asp:Label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <nobr>City</nobr>
+                    </td>
+                    <td>
+                      <asp:Label ID="lblCity" runat="server" Text=""></asp:Label>
+                    </td>
+                    <td>
+                      <nobr>State/Province</nobr>
+                    </td>
+                    <td>
+                      <asp:Label ID="lblState" runat="server" Text=""></asp:Label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <nobr>Zip/Postal code</nobr>
+                    </td>
+                    <td>
+                      <asp:Label ID="lblZip" runat="server" Text=""></asp:Label>
+                    </td>
+                    <td>
+                      <nobr>Country</nobr>
+                    </td>
+                    <td>
+                      <asp:Label ID="lblCountry" runat="server" Text=""></asp:Label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Annual revenue</td>
+                    <td>
+                      <asp:Label ID="lblAnnRev" runat="server" Text=""></asp:Label>
+                    </td>
+                    <td>Industry sector</td>
+                    <td>
+                      <asp:Label ID="lblSector" runat="server" Text=""></asp:Label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Website</td>
+                    <td>
+                      <asp:Label ID="lblWebsite" runat="server" Text=""></asp:Label>
+                    </td>
+                    <td>Brief description</td>
+                    <td>
+                      <asp:Label ID="lblDesc" runat="server" Text=""></asp:Label>
+                    </td>
+                  </tr>
+                </table>
+                <!-- end Organization summary table -->
+
+                <h1>Contact Summary</h1>
+
+                <!-- Contact summary table -->
+                <table class="table">
+                  <tr>
+                    <td>Prefix</td>
+                    <td>
+                      <asp:Label ID="lblCPrefix" runat="server"></asp:Label>
+                    </td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td class="auto-style1">Contact First Name</td>
+                    <td class="auto-style1">
+                      <asp:Label ID="lblcFirstName" runat="server"></asp:Label>
+                    </td>
+                    <td class="auto-style1">Contact Last Name</td>
+                    <td class="auto-style1">
+                      <asp:Label ID="lblCLLastName" runat="server"></asp:Label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Suffix</td>
+                    <td>
+                      <asp:Label ID="lblCSuffix" runat="server"></asp:Label>
+                    </td>
+                    <td>Job title</td>
+                    <td>
+                      <asp:Label ID="lblCJobTitle" runat="server"></asp:Label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Email</td>
+                    <td>
+                      <asp:Label ID="lblCEmail" runat="server"></asp:Label>
+                    </td>
+                    <td>Phone</td>
+                    <td>
+                      <asp:Label ID="lblCPhone" runat="server"></asp:Label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Address 1</td>
+                    <td>
+                      <asp:Label ID="lblCAddress1" runat="server"></asp:Label>
+                    </td>
+                    <td>Address 2</td>
+                    <td>
+                      <asp:Label ID="lblCAddress2" runat="server"></asp:Label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>City</td>
+                    <td>
+                      <asp:Label ID="lblCCity" runat="server"></asp:Label>
+                    </td>
+                    <td>State</td>
+                    <td>
+                      <asp:Label ID="lblCState" runat="server"></asp:Label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Zip/Postal code</td>
+                    <td>
+                      <asp:Label ID="lblCZip" runat="server"></asp:Label>
+                    </td>
+                    <td>Contact Type</td>
+                    <td>
+                      <asp:Label ID="lblCContactType" runat="server"></asp:Label>
+                    </td>
+                  </tr>
+                </table>
+                <!-- end Contact summary table-->
+
+                <form>
+                  <h1>Payment Information</h1>
+
+                  <h5 class="text-left font-weight-bold">Online transactions utilize a secure server and automated credit or debit card authorization service. For security reasons, this system will store approval codes, but not credit card numbers. Credit card information must be re-entered
+                    for all future transactions.</h5><br>
+
+                  <table class="table">
+                    <tr>
+                      <td>Total Due</td>
+                      <td>
+                        <asp:Label ID="lblTotalDue" runat="server"></asp:Label>
+                      </td>
+                      <td>
+                        <asp:TextBox ID="sTotalDue" runat="server" Visible="False"></asp:TextBox>
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <asp:Label ID="lblOR" runat="server" Text="-OR-" Visible="False"></asp:Label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <asp:CheckBox ID="chkSelectThisOpt" runat="server" OnCheckedChanged="chkSelectThisOpt_CheckedChanged" Text="Select This Option" Visible="False" />
+                      </td>
+                      <td>
+                        <asp:Label ID="lblTotalDueQ4" runat="server" Visible="False"></asp:Label>
+                      </td>
+                      <td>
+                        <asp:Label ID="lblNotification" runat="server" Text="*25% of Dues Plus the Next Full Year" Visible="False"></asp:Label>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label>First Name on Card</label><br>
+                      <input type="text" id="sBillToFN">
+                    </div>
+                    <div class="col-md-6">
+                      <label>Last Name on Card</label><br>
+                      <input type="text" id="sBillToLN">
+                    </div>
+                  </div><br>
+
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label>Bill to Street</label><br>
+                      <input type="text" id="sBillToStreet">
+                    </div>
+                    <div class="col-md-3">
+                      <label>Bill to City</label><br>
+                      <input type="text" id="sBillToCity">
+                    </div>
+                    <div class="col-md-3">
+                      <label>Bill to ZIP/Postal Code</label><br>
+                      <input type="text" id="sBillToZip">
+                    </div>
+                    <div class="col-md-3">
+                      <label>Bill to State</label><br>
+                      <select id="sBillToState">
+                                                <option value=""></option>
+                                                <option value="AL">Alabama</option>
+                                                <option value="AK">Alaska</option>
+                                                <option value="AZ">Arizona</option>
+                                                <option value="AR">Arkansas</option>
+                                                <option value="CA">California</option>
+                                                <option value="CO">Colorado</option>
+                                                <option value="CT">Connecticut</option>
+                                                <option value="DE">Delaware</option>
+                                                <option value="DC">District of Columbia</option>
+                                                <option value="FL">Florida</option>
+                                                <option value="GA">Georgia</option>
+                                                <option value="GU">Guam</option>
+                                                <option value="HI">Hawaii</option>
+                                                <option value="ID">Idaho</option>
+                                                <option value="IL">Illinois</option>
+                                                <option value="IN">Indiana</option>
+                                                <option value="IA">Iowa</option>
+                                                <option value="KS">Kansas</option>
+                                                <option value="KY">Kentucky</option>
+                                                <option value="LA">Lousiana</option>
+                                                <option value="ME">Maine</option>
+                                                <option value="MD">Maryland</option>
+                                                <option value="MA">Massachusetts</option>
+                                                <option value="MI">Michigan</option>
+                                                <option value="MN">Minnesota</option>
+                                                <option value="MS">Mississippi</option>
+                                                <option value="MO">Missouri</option>
+                                                <option value="MT">Montana</option>
+                                                <option value="NE">Nebraska</option>
+                                                <option value="NV">Nevada</option>
+                                                <option value="NH">New Hampshire</option>
+                                                <option value="NJ">New Jersey</option>
+                                                <option value="NM">New Mexico</option>
+                                                <option value="NY">New York</option>
+                                                <option value="NC">North Carolina</option>
+                                                <option value="ND">North Dakota</option>
+                                                <option value="OH">Ohio</option>
+                                                <option value="OK">Oklahoma</option>
+                                                <option value="ON">Ontario</option>
+                                                <option value="OR">Oregon</option>
+                                                <option value="PA">Pennsylvania</option>
+                                                <option value="PR">Puerto Rico</option>
+                                                <option value="QC">Quebec</option>
+                                                <option value="RI">Rhode Island</option>
+                                                <option value="SC">South Carolina</option>
+                                                <option value="SD">South Dakota</option>
+                                                <option value="TN">Tennessee</option>
+                                                <option value="TX">Texas</option>
+                                                <option value="UT">Utah</option>
+                                                <option value="VT">Vermont</option>
+                                                <option value="VI">Virgin Islands</option>
+                                                <option value="VA">Virginia</option>
+                                                <option value="WA">Washington</option>
+                                                <option value="WV">West Virginia</option>
+                                                <option value="WI">Wisconsin</option>
+                                                <option value="WY">Wyoming</option>
+                                            </select>
+                    </div>
+                  </div><br>
+
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label>Card Number</label><br>
+                      <input type="text" MaxLength="12" id="sCCNumber">
+                    </div>
+                    <div class="col-md-3">
+                      <label>Card Expiration Month</label><br>
+                      <input type="text" id="sCCExMonth" maxlength="2" style="width: 40px">
+                    </div>
+                    <div class="col-md-3">
+                      <label>Card Expiration Year</label><br>
+                      <input type="text" id="sCCExYear" maxlength="2" style="width: 40px">
+                    </div>
+                    <div class="col-md-3">
+                      <label>Card CCV Number</label><br>
+                      <input type="text" id="sCCCvv" maxlength="3" style="width: 40px">
+                    </div>
+                  </div>
+                </form>
+                <h6 class="font-weight-bold">
+                  Notice: By submitting the "complete application" button shown below, I confirm that the organization I represent is in accordance with the purpose and principles of the American National Standards Institute (ANSI) and that we wish to join ANSI as a member.
+                  We also agree to provide a minimum of 60-days notice prior to our renewal date should we elect to terminate membership
+                </h6><br>
+                <div id="" class="pdf-button">Save to PDF</div><br>
+                <div id="continue2" class="continue-button">Continue</div><br>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Step 3: Review Application <div class="edit-step">Edit Step</div></a>
+              </h4>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse">
+              <div class="panel-body">
+                <p class="font-weight-bold" style="color: #006CB5">Welcome to ANSI, we&#39;re so pleased to have you as our new member! This is your payment confirmation. Please print your receipt or save to your files.</p>
+
+                <h1>Organization Information</h1>
+
+                <table class="table">
+                  <tr>
+                    <td>
+                      <nobr><b>Membership ID</b></nobr><br>
+                    </td>
+                    <td>
+                      <asp:Label ID="lblMemberId" runat="server" Text=""></asp:Label>
+                    </td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <nobr>Membership type</nobr>
+                    </td>
+                    <td>
+                      <asp:Label ID="lblMembershipType" runat="server" Text=""></asp:Label>
+                    </td>
+                    <td>
+                      <nobr>Membership category</nobr>
+                    </td>
+                    <td>
+                      <asp:Label ID="lblMemCat" runat="server" Text=""></asp:Label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <nobr>Company Name</nobr>
+                    </td>
+                    <td>
+                      <asp:Label ID="lblCompanyName" runat="server" Text=""></asp:Label>
+                    </td>
+                    <td>
+                      <nobr>Address 1</nobr>
+                    </td>
+                    <td>
+                      <asp:Label ID="lblAddress1" runat="server" Text=""></asp:Label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <nobr>Address 2</nobr>
+                    </td>
+                    <td>
+                      <asp:Label ID="lblAddress2" runat="server" Text=""></asp:Label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <nobr>City</nobr>
+                    </td>
+                    <td>
+                      <asp:Label ID="lblCity" runat="server" Text=""></asp:Label>
+                    </td>
+                    <td>
+                      <nobr>State/Province</nobr>
+                    </td>
+                    <td>
+                      <asp:Label ID="lblState" runat="server" Text=""></asp:Label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <nobr>Zip/Postal code</nobr>
+                    </td>
+                    <td>
+                      <asp:Label ID="lblZip" runat="server" Text=""></asp:Label>
+                    </td>
+                    <td>
+                      <nobr>Country</nobr>
+                    </td>
+                    <td>
+                      <asp:Label ID="lblCountry" runat="server" Text=""></asp:Label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Annual revenue</td>
+                    <td>
+                      <asp:Label ID="lblAnnRev" runat="server" Text=""></asp:Label>
+                    </td>
+                    <td>Industry sector</td>
+                    <td>
+                      <asp:Label ID="lblSector" runat="server" Text=""></asp:Label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Website</td>
+                    <td>
+                      <asp:Label ID="lblWebsite" runat="server" Text=""></asp:Label>
+                    </td>
+                    <td>Brief description</td>
+                    <td>
+                      <asp:Label ID="lblDesc" runat="server" Text=""></asp:Label>
+                    </td>
+                  </tr>
+                </table>
+
+                <h1>Contact Information</h1>
+                <table class="table">
+                  <tr>
+                    <td>Prefix</td>
+                    <td>
+                      <asp:Label ID="lblCPrefix" runat="server"></asp:Label>
+                    </td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td class="auto-style1">Contact First Name</td>
+                    <td class="auto-style1">
+                      <asp:Label ID="lblcFirstName" runat="server"></asp:Label>
+                    </td>
+                    <td class="auto-style1">Contact Last Name</td>
+                    <td class="auto-style1">
+                      <asp:Label ID="lblCLLastName" runat="server"></asp:Label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Suffix</td>
+                    <td>
+                      <asp:Label ID="lblCSuffix" runat="server"></asp:Label>
+                    </td>
+                    <td>Job title</td>
+                    <td>
+                      <asp:Label ID="lblCJobTitle" runat="server"></asp:Label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Email</td>
+                    <td>
+                      <asp:Label ID="lblCEmail" runat="server"></asp:Label>
+                    </td>
+                    <td>Phone</td>
+                    <td>
+                      <asp:Label ID="lblCPhone" runat="server"></asp:Label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Address 1</td>
+                    <td>
+                      <asp:Label ID="lblCAddress1" runat="server"></asp:Label>
+                    </td>
+                    <td>Address 2</td>
+                    <td>
+                      <asp:Label ID="lblCAddress2" runat="server"></asp:Label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>City</td>
+                    <td>
+                      <asp:Label ID="lblCCity" runat="server"></asp:Label>
+                    </td>
+                    <td>State</td>
+                    <td>
+                      <asp:Label ID="lblCState" runat="server"></asp:Label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Zip/Postal code</td>
+                    <td>
+                      <asp:Label ID="lblCZip" runat="server"></asp:Label>
+                    </td>
+                    <td>Contact Type</td>
+                    <td>
+                      <asp:Label ID="lblCContactType" runat="server"></asp:Label>
+                    </td>
+                  </tr>
+                </table>
+
+                <h1>Cost Summary</h1>
+                <table class="table">
+                  <tr>
+                    <td>Total Amount Paid : </td>
+                    <td>
+                      <asp:Label ID="lblTotal" runat="server"></asp:Label>
+                    </td>
+                  </tr>
+                </table>
+                <input type="checkbox"> *ANSI will use your personal data to respond to your request. We will only use this information for the reasons above unless you consent to us using this information in other ways. You may always rescind your consent,
+                per ANSI’s Privacy Policy<br /><br />
+                <div id="" class="pdf-button">Save to PDF</div><br>
+                <div id="continue3" class="continue-button">Continue</div><br>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Step 4: Confirmtion <div class="edit-step">Edit Step</div></a>
+              </h4>
+            </div>
+            <div id="collapse4" class="panel-collapse collapse">
+              <div class="panel-body">
+                <p class="font-weight-bold" style="color: #006CB5">Welcome to ANSI, we&#39;re so pleased to have you as our new member! This is your payment confirmation. Please print your receipt or save to your files.</p>
+
+                <h1>Organization Information</h1>
+
+                <table class="table">
+                  <tr>
+                    <td>
+                      <nobr><b>Membership ID</b></nobr><br>
+                    </td>
+                    <td>
+                      <asp:Label ID="lblMemberId" runat="server" Text=""></asp:Label>
+                    </td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <nobr>Membership type</nobr>
+                    </td>
+                    <td>
+                      <asp:Label ID="lblMembershipType" runat="server" Text=""></asp:Label>
+                    </td>
+                    <td>
+                      <nobr>Membership category</nobr>
+                    </td>
+                    <td>
+                      <asp:Label ID="lblMemCat" runat="server" Text=""></asp:Label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <nobr>Company Name</nobr>
+                    </td>
+                    <td>
+                      <asp:Label ID="lblCompanyName" runat="server" Text=""></asp:Label>
+                    </td>
+                    <td>
+                      <nobr>Address 1</nobr>
+                    </td>
+                    <td>
+                      <asp:Label ID="lblAddress1" runat="server" Text=""></asp:Label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <nobr>Address 2</nobr>
+                    </td>
+                    <td>
+                      <asp:Label ID="lblAddress2" runat="server" Text=""></asp:Label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <nobr>City</nobr>
+                    </td>
+                    <td>
+                      <asp:Label ID="lblCity" runat="server" Text=""></asp:Label>
+                    </td>
+                    <td>
+                      <nobr>State/Province</nobr>
+                    </td>
+                    <td>
+                      <asp:Label ID="lblState" runat="server" Text=""></asp:Label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <nobr>Zip/Postal code</nobr>
+                    </td>
+                    <td>
+                      <asp:Label ID="lblZip" runat="server" Text=""></asp:Label>
+                    </td>
+                    <td>
+                      <nobr>Country</nobr>
+                    </td>
+                    <td>
+                      <asp:Label ID="lblCountry" runat="server" Text=""></asp:Label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Annual revenue</td>
+                    <td>
+                      <asp:Label ID="lblAnnRev" runat="server" Text=""></asp:Label>
+                    </td>
+                    <td>Industry sector</td>
+                    <td>
+                      <asp:Label ID="lblSector" runat="server" Text=""></asp:Label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Website</td>
+                    <td>
+                      <asp:Label ID="lblWebsite" runat="server" Text=""></asp:Label>
+                    </td>
+                    <td>Brief description</td>
+                    <td>
+                      <asp:Label ID="lblDesc" runat="server" Text=""></asp:Label>
+                    </td>
+                  </tr>
+                </table>
+
+                <h1>Contact Information</h1>
+                <table class="table">
+                  <tr>
+                    <td>Prefix</td>
+                    <td>
+                      <asp:Label ID="lblCPrefix" runat="server"></asp:Label>
+                    </td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td class="auto-style1">Contact First Name</td>
+                    <td class="auto-style1">
+                      <asp:Label ID="lblcFirstName" runat="server"></asp:Label>
+                    </td>
+                    <td class="auto-style1">Contact Last Name</td>
+                    <td class="auto-style1">
+                      <asp:Label ID="lblCLLastName" runat="server"></asp:Label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Suffix</td>
+                    <td>
+                      <asp:Label ID="lblCSuffix" runat="server"></asp:Label>
+                    </td>
+                    <td>Job title</td>
+                    <td>
+                      <asp:Label ID="lblCJobTitle" runat="server"></asp:Label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Email</td>
+                    <td>
+                      <asp:Label ID="lblCEmail" runat="server"></asp:Label>
+                    </td>
+                    <td>Phone</td>
+                    <td>
+                      <asp:Label ID="lblCPhone" runat="server"></asp:Label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Address 1</td>
+                    <td>
+                      <asp:Label ID="lblCAddress1" runat="server"></asp:Label>
+                    </td>
+                    <td>Address 2</td>
+                    <td>
+                      <asp:Label ID="lblCAddress2" runat="server"></asp:Label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>City</td>
+                    <td>
+                      <asp:Label ID="lblCCity" runat="server"></asp:Label>
+                    </td>
+                    <td>State</td>
+                    <td>
+                      <asp:Label ID="lblCState" runat="server"></asp:Label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Zip/Postal code</td>
+                    <td>
+                      <asp:Label ID="lblCZip" runat="server"></asp:Label>
+                    </td>
+                    <td>Contact Type</td>
+                    <td>
+                      <asp:Label ID="lblCContactType" runat="server"></asp:Label>
+                    </td>
+                  </tr>
+                </table>
+
+                <h1>Cost Summary</h1>
+                <table class="table">
+                  <tr>
+                    <td>Total Amount Paid : </td>
+                    <td>
+                      <asp:Label ID="lblTotal" runat="server"></asp:Label>
+                    </td>
+                  </tr>
+                </table>
+                <div id="continue4" class="continue-button">Submit Application</div><br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>

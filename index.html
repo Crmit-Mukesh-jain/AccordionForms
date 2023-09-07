@@ -43,7 +43,7 @@
                 <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">EVENT INFO<div class="edit-step">Edit Step</div></a>
               </h4>
             </div>
-            <div id="collapse1" class="panel-collapse collapse in">
+            <div id="collapse1" class="panel-collapse collapse">
               <div class="panel-body">
                 <!-- <form>
                   <h2>Organization Information</h2><br>
@@ -630,37 +630,363 @@
               <div class="panel-body">
                 <div class="form-group col-md-12 col-lg-12">
                   <label for="EventAttendees">Select all marketing opportunities and event benefits available for this event</label>
+                  
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="checkbox" id="SpeakingOpportunity" value="option1">
                     <label class="form-check-label" for="SpeakingOpportunity">Speaking Opportunity</label>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="Ad" value="option2">
-                    <label class="form-check-label" for="Ad">Ad</label>
+                    <input class="form-check-input" type="checkbox" id="Ad1" value="option2">
+                    <label class="form-check-label" for="Ad1">Ad</label>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="SpeakingOpportunity" value="option3">
-                    <label class="form-check-label" for="SpeakingOpportunity">Speaking Opportunity</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="PromoItems" value="option4">
+                    <input class="form-check-input" type="checkbox" id="PromoItems" value="option3">
                     <label class="form-check-label" for="PromoItems">Promo Items</label>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="Raffle" value="option5">
+                    <input class="form-check-input" type="checkbox" id="Raffle" value="option4">
                     <label class="form-check-label" for="Raffle">Raffle</label>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="ExhibitSpace" value="option6">
+                    <input class="form-check-input" type="checkbox" id="ExhibitSpace" value="option5">
                     <label class="form-check-label" for="ExhibitSpace">Exhibit Space</label>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="StrategicDinner/Reception" value="option7">
-                    <label class="form-check-label" for="StrategicDinner/Reception">Strategic Dinner/Reception</label>
+                    <input class="form-check-input" type="checkbox" id="StrategicDinner" value="option6">
+                    <label class="form-check-label" for="StrategicDinner">Strategic Dinner/Reception</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="Others" value="option7">
+                    <label class="form-check-label" for="Others">Others</label>
                   </div>
                 </div>
+                <div class="MarketingOpportunities">
+                  <div class="grid-container">
+                  <div id="SpeakingOpprtunityContent" class="grid-item panel-heading item1">
+                    <h4>Speaking Opprtunity Content</h4>
+                    <form>
+                      <div class="form-row">
+                        <div class="form-group col-md-12">
+                          <label for="Speaking1">Please provide any information on the speaker and topic</label>
+                          <input type="text" class="form-control" id="Speaking1" placeholder="speaker and topic">
+                        </div>
+                        <div class="form-group col-md-12">
+                          <label for="Speaking2">Quantity, if known</label>
+                          <input type="number" class="form-control" id="Speaking2" placeholder="Quantity">
+                        </div>
+                        <div class="form-group col-md-12">
+                          <label for="Speaking3">Cost</label>
+                          <input type="number" class="form-control" id="Speaking3" placeholder="Cost">
+                        </div>
+                      </div>
+                    </form>    
+                  </div>
+                  <div id="AdContent1" class="grid-item panel-heading item2">
+                    <h4>Ad Content</h4>
+                    <form>
+                      <div class="form-row">
+                        <div class="form-group col-md-12">
+                          <label for="AdSize">Ad Size</label>
+                          <input type="text" class="form-control" id="AdSize" placeholder="Ad Size">
+                        </div>
+                      </div>
+                    </form> 
+                  </div>
+                  <div id="PromoItemsContent" class="grid-item panel-heading item3">
+                    <h4>Promo Items Content</h4>
+                    <form>
+                      <div class="form-row">
+                        <div class="form-group">
+                          <label for="PromoItemsContent1">Suggested promotional items?</label>
+                          <input type="text" class="form-control" id="PromoItemsContent1" placeholder="promotional items">
+                        </div>
+                        <div class="form-group">
+                          <label for="PromoItemsContent2">Do they need to be Made in USA?</label>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input checked" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="inlineRadio1">yes</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                            <label class="form-check-label" for="inlineRadio2">No</label>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="PromoItemsContent3">Budget <sub>Instructions: Estimate $500-$1,000 for 250-500 items, including raffle, increase 30% if Made In the USA<sub></label>
+                            <select class="form-control form-select" aria-label="Default select example">
+                              <option selected>Select Estimate</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                          <label for="PromoItemsContent4">Quantity</label>
+                          <input type="number" class="form-control" id="PromoItemsContent4" placeholder="Quantity">
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div id="RaffleContent" class="grid-item panel-heading item4">
+                    <h4>Raffle Content</h4>
+                    <form>
+                      <div class="form-row">
+                        <div class="form-group">
+                          <label for="RaffleContent2">Should the raffle prize(s) be UHC-branded?</label>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input checked" type="radio" name="inlineRadioOptions" id="RaffleContent1inlineRadio1" value="option1">
+                            <label class="form-check-label" for="RaffleContent1inlineRadio1">yes</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="RaffleContent1inlineRadio2" value="option2">
+                            <label class="form-check-label" for="RaffleContent1inlineRadio2">No</label>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="RaffleContent1">Suggested Raffle Item</label>
+                          <input type="text" class="form-control" id="RaffleContent1" placeholder="Suggested Raffle Items">
+                        </div>
+                      </div>
+                    </form>    
+                  </div>
+                  <div id="ExhibitSpaceContent" class="grid-item panel-heading item5">
+                    <h4>Exhibit Space Content</h4>
+                    <form>
+                      <div class="form-row">
+                        <div class="form-group">
+                          <label for="RaffleContent2">Do you have exihibit Space?</label>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input checked" type="radio" name="inlineRadioOptions" id="RaffleContent1inlineRadio1" value="option1">
+                            <label class="form-check-label" for="RaffleContent1inlineRadio1">yes</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="RaffleContent1inlineRadio2" value="option2">
+                            <label class="form-check-label" for="RaffleContent1inlineRadio2">No</label>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="RaffleContent2">Do you need onsite support?</label>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input checked" type="radio" name="inlineRadioOptions" id="RaffleContent1inlineRadio1" value="option1">
+                            <label class="form-check-label" for="RaffleContent1inlineRadio1">yes</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="RaffleContent1inlineRadio2" value="option2">
+                            <label class="form-check-label" for="RaffleContent1inlineRadio2">No</label>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="RaffleContent1">Suggested Raffle Item</label>
+                          <select class="form-control form-select" aria-label="Default select example">
+                            <option selected>Select Raffle Item</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label for="RaffleContent2">Booth Assets?</label>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input checked" type="radio" name="inlineRadioOptions" id="RaffleContent1inlineRadio1" value="option1">
+                            <label class="form-check-label" for="RaffleContent1inlineRadio1">yes</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="RaffleContent1inlineRadio2" value="option2">
+                            <label class="form-check-label" for="RaffleContent1inlineRadio2">No</label>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="RaffleContent2">Backlit?</label>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input checked" type="radio" name="inlineRadioOptions" id="RaffleContent1inlineRadio1" value="option1">
+                            <label class="form-check-label" for="RaffleContent1inlineRadio1">yes</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="RaffleContent1inlineRadio2" value="option2">
+                            <label class="form-check-label" for="RaffleContent1inlineRadio2">No</label>
+                          </div>
+                        </div>
+                      </div>
+                    </form>  
+                  </div>
+                  <div id="StrategicDinnerContent" class="grid-item panel-heading item6">
+                    <h4>Strategic Dinner Content</h4>
+                    <form>
+                      <div class="form-row">
+                        <div class="form-group">
+                          <label for="ContentDate">Date</label>
+                          <input type="date" class="form-control" id="ContentDate" placeholder="Select Strategic Dinner Date">
+                        </div>
+                        <div class="form-group">
+                          <label for="RaffleContent1">Target audience</label>
+                          <input type="text" class="form-control" id="RaffleContent1" placeholder="Suggested Raffle Items">
+                        </div>
+                        <div class="form-group">
+                          <label for="RaffleContent1">Estimated headcount</label>
+                          <input type="text" class="form-control" id="RaffleContent1" placeholder="Suggested Raffle Items">
+                        </div>
+                        <div class="form-group">
+                          <label for="RaffleContent1">Requested venue(s) if any</label>
+                          <input type="text" class="form-control" id="RaffleContent1" placeholder="Suggested Raffle Items">
+                        </div>
+                        <div class="form-group">
+                          <label for="theUHGattendees">Who are the UHG attendees?</label>
+                          <textarea  class="form-control" rows="3" id="theUHGattendees" placeholder="the UHG attendees"></textarea>
+                        </div>
+                        <div class="form-group">
+                          <label for="RaffleContent1">Estimated budget</label>
+                          <input type="text" class="form-control" id="RaffleContent1" placeholder="Suggested Raffle Items">
+                        </div>
+                        <div class="form-group">
+                          <label for="RaffleContent1">Add-ons</label>
+                          <select class="form-control form-select" aria-label="Default select example">
+                            <option selected>Select Add-ons</option>
+                            <option value="1">email invitation</option>
+                            <option value="2">signage</option>
+                            <option value="3">other</option>
+                          </select>
+                        </div>
+                      </div>
+                    </form>  
+                  </div>
+                  <div id="OthersContent" class="grid-item panel-heading item7">
+                    <h4>Others Content</h4>
+                    <form>
+                      <div class="form-row">
+                        <div class="form-group col-md-12">
+                          <label for="OthersContent1">Provide details</label>
+                          <textarea  class="form-control" row="3" id="OthersContent1" placeholder="Provide details"></textarea>
+                        </div>
+                      </div>
+                    </form> 
+                  </div>
+                </div>  
                 
-                <div id="continue4" class="continue-button">Submit Application</div><br>
+              </div>
+                <br><br><br>
+              <div id="continue4" class="continue-button">Submit Application</div><br>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Event Budget<div class="edit-step">Edit Step</div></a>
+              </h4>
+            </div>
+            <div id="collapse5" class="panel-collapse collapse in">
+              <div class="panel-body">
+                <div class="dynamicAddAndRemoveRows">
+                  <div class="container">
+                    <div class="row clearfix">
+                      <div class="col-md-12 table-responsive">
+                      <table class="table table-bordered table-hover table-sortable" id="tab_logic">
+                        <thead>
+                          <tr >
+                            <th class="text-center">
+                              ESTIMATED COSTS
+                            </th>
+                            <th class="text-center">
+                              Estimated Total Cost <br><sub>including amount paid by others</sub>
+                            </th>
+                            <th class="text-center">
+                              Estimated PSLT Portion
+                            </th>
+                              <th class="text-center">
+                                Other Funding Source
+                            </th>
+                                <th class="text-center" style="border-top: 1px solid #ffffff; border-right: 1px solid #ffffff;">
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <tr id='addr0' data-id="0" class="hidden">
+                            <td data-name="name">
+                              <select name="name" class="form-control">
+                                <option value="">Select Extimation</option>
+                                <option value="1">Sponsorship</option>
+                                <option value="2">Booth</option>
+                                <option value="3">Program Ad</option>
+                                <option value="4">Promotional Items</option>
+                                <option value="5">Raffle Item(s)</option>
+                                <option value="6">Printed Materials</option>
+                                <option value="7">Strategic Dinner</option>
+                              </select>
+                            </td>
+                            <td data-name="mail">
+                                <input type="text" name='mail0' placeholder='Email' class="form-control"/>
+                            </td>
+                            <td data-name="desc">
+                              <input type="text" name='desc0' placeholder='Description' class="form-control"/>
+                            </td>
+                              <td data-name="sel">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    Checked checkbox
+                                  </label>
+                                </div>
+                            </td>
+                                        <td data-name="del">
+                                            <button name="del0" class='btn btn-danger glyphicon glyphicon-remove row-remove'><span aria-hidden="true"></span></button>
+                                        </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <a id="add_row" class="btn btn-primary float-right">Add Row</a>
+                </div>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="EventState">Which PSLT Budget Center will be used?</label>
+                      <select class="form-control form-select" aria-label="Default select example">
+                        <option selected>Select PSLT Budget</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="EventState">Are other teams willing to split the cost?</label>
+                      <select class="form-control form-select" aria-label="Default select example">
+                        <option selected>Select Teams Willing</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="EventState">If yes, provide the name of the team/s</label>
+                      <select class="form-control form-select" aria-label="Default select example">
+                        <option selected>Select Name of the Teams</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="EventState">Contact person/people from other team(s)</label>
+                      <select class="form-control form-select" aria-label="Default select example">
+                        <option selected>Select Contact person/people</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="EventState">Health Plan budget center <sub>(selectable if "Health Plan" is selected as an Other Budget Center)<sub></label>
+                      <select class="form-control form-select" aria-label="Default select example">
+                        <option selected>Select Health Plan Budget</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="EventContactComments112">GL Code for Other Team</label>
+                  <input type="text" class="form-control" id="EventContactComments112">
+                </div>
               </div>
             </div>
           </div>

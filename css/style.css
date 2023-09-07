@@ -80,3 +80,24 @@ a:focus {
 .pdf-button:hover {
   background-color: #006cb5;
 }
+
+#SpeakingOpprtunityContent, 
+#AdContent, #PromoItemsContent, #RaffleContent, #ExhibitSpaceContent, #StrategicDinnerContent, #OthersContent{
+  display: none;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 4fr);
+  gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+}
+
+
+.table-sortable tbody tr {
+  cursor: move;
+}

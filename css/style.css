@@ -82,7 +82,7 @@ a:focus {
 }
 
 #SpeakingOpprtunityContent, 
-#AdContent, #PromoItemsContent, #RaffleContent, #ExhibitSpaceContent, #StrategicDinnerContent, #OthersContent{
+#AdContent1, #PromoItemsContent, #RaffleContent, #ExhibitSpaceContent, #StrategicDinnerContent, #OthersContent{
   display: none;
 }
 .grid-container {
